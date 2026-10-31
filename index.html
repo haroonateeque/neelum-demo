@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2b3444">
+  <meta name="description" content="Neelum — a live wedding invitation demo. See exactly what your guests receive.">
+  <title>Neelum — Live Demo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f4c86'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%23f4e3b7'%3E%26%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./demo.css">
+</head>
+<body>
+  <main class="stage">
+    <div class="device" id="device">
+      <div class="screen">
+        <div class="statusbar">
+          <span class="statusbar__time">9:41</span>
+          <span class="statusbar__island" aria-hidden="true"></span>
+          <span class="statusbar__icons" aria-hidden="true">
+            <span class="signal"><i></i><i></i><i></i><i></i></span>
+            <span class="wifi"></span>
+            <span class="battery"></span>
+          </span>
+        </div>
+        <div class="viewport">
+          <iframe id="frame" src="./card.html" title="Neelum wedding invitation" allow="autoplay"></iframe>
+        </div>
+        <div class="safari">
+          <span class="safari__aa" aria-hidden="true">aA</span>
+          <span class="safari__url">
+            <svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+            neelum.demo
+          </span>
+          <button class="safari__buy" id="buyThis" type="button">Buy this</button>
+        </div>
+      </div>
+      <span class="device__side device__side--volume-up" aria-hidden="true"></span>
+      <span class="device__side device__side--volume-down" aria-hidden="true"></span>
+      <span class="device__side device__side--power" aria-hidden="true"></span>
+    </div>
+    <p class="caption"><b>NEELUM</b><span aria-hidden="true"> · </span>EXACTLY WHAT YOUR GUESTS RECEIVE</p>
+  </main>
+  <script src="./demo.js"></script>
+</body>
+</html>
