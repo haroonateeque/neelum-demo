@@ -63,6 +63,10 @@
   }
 
   function init() {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
     DATA.events.forEach((event) => {
       state.rsvp[event.id] = { attending: true, guests: 2 };
     });
@@ -132,7 +136,12 @@
       document.body.classList.remove('is-locked');
       els.controls.hidden = false;
       els.bottom.hidden = false;
-      window.scrollTo({ top: 0, behavior: 'auto' });
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      window.setTimeout(() => {
+        if (!state.scratchLocked) window.scrollTo(0, 0);
+      }, 80);
       startMusic();
       checkScratchGate();
       window.setTimeout(checkScratchGate, 700);
